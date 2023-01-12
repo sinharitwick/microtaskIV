@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    <link rel="manifest" href="./images/site.webmanifest">
+    <title>Microservices Documentation</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>Microservices Doc</header>
+      <ul>
+        <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+        <li>
+          <a class="nav-link" href="#What_you_should_already_know"
+            >What is a Web API</a
+          >
+        </li>
+        <li>
+          <a class="nav-link" href="#JavaScript_and_Java"
+            >What is a Microservice</a
+          >
+        </li>
+        <li>
+          <a class="nav-link" href="#Hello_world">Micro-Task #1: Web API</a>
+        </li>
+        <li><a class="nav-link" href="#Variables">Micro-Task #2: Microservices</a></li>
+        <li>
+          <a class="nav-link" href="#Declaring_variables"
+            >Micro-Task #3: Location microservice</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <article>
+          <p>
+            This is a documentation on the different microservices built for
+            HostelDevta, a hostel & paying guest marketplace and booking
+            platform that empowers business with software solutions that
+            increase earnings and ease operations.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="What_you_should_already_know">
+        <header>What is a Web API</header>
+        <article>
+          <p>
+            API stands for Application Programming Interface. A Web API can:
+          </p>
+
+          <ul>
+            <li>extend the functionality of the browser</li>
+            <li>greatly simplify complex functions</li>
+            <li>provide easy syntax to complex code</li>
+          </ul>
+          <p>
+            REST APIs (which are a type of web API) involve requests and
+            responses, not too unlike visiting a web page. You make a request to
+            a resource stored on a server, and the server responds with the
+            requested information. The protocol used to transport the data is
+            HTTP. “REST” stands for Representational State Transfer.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="JavaScript_and_Java">
+        <header>What is a Microservice</header>
+        <article>
+          <p>
+            Microservices - also known as the microservice architecture - is an
+            architectural style that structures an application as a collection
+            of services that are:
+          </p>
+          <ul>
+            <li>Independently deployable</li>
+            <li>Loosely coupled</li>
+            <li>Organized around business capabilities</li>
+            <li>Owned by a small team</li>
+            <li>Highly maintainable and testable</li>
+          </ul>
+          <p>
+            The microservice architecture enables the rapid, frequent and
+            reliable delivery of large, complex applications. It also enables an
+            organization to evolve its technology stack.
+          </p>
+        </article>
+      </section>
+      <section class="main-section" id="Hello_world">
+        <header>Micro-Task #1: Web API</header>
+        <article>
+          This is an API for getting hostel details.
+          To get hostel details, just make a <span style="font-weight:bold; color:cyan">GET</span> request to the following URL:
+          <code
+            >https://ls8436.deta.dev/hostel
+          </code>
+          And you'll get back a JSON response of hostel details that looks something like this:
+          <code>{
+                  "id": 1,
+                  "gender": "male",
+                  "rating": 5
+                }</code>
+        </article>
+      </section>
+      <section class="main-section" id="Variables">
+        <header>Micro-Task #2: Microservices</header>
+        <article>
+          <p>
+            This microservice performs three tasks:
+            <ul>
+              <li>Error Handling - Handles Server Status</li>
+              <li>Visitor Counter - Counts the number of visits on the page</li>
+              <li>Authentication - Login/Sign Up</li>
+            </ul>
+          </p>
+          <p><span style="font-weight:bold; color:cyan">ERROR HANDLING</span></p>
+          <p>
+            This is an API for handling server status errors.
+            To check, just make a <span style="font-weight:bold; color:cyan">GET</span> request to the following URL:
+          </p>
+          <code
+            >https://ckwpzi.deta.dev/gibberish
+          </code>
+          And you'll get back a JSON response of an error message that looks something like this:
+          <code>{
+                  "status": 404,
+                  "error": "Not found"
+                }</code>
+          <p><span style="font-weight:bold; color:cyan">VISITOR COUNTER</span></p>
+          <p>
+            This is an API for counting the number of visitors on the page.
+            To get the number of visits, just make a <span style="font-weight:bold; color:cyan">GET</span> request to the following URL:
+          </p>
+          <code
+            >https://ckwpzi.deta.dev/api/counter
+          </code>
+          And you'll get back a JSON response of the number of visits that looks something like this:
+          <code>{"visits":7}</code>
+          <p><span style="font-weight:bold; color:cyan">AUTHENTICATION</span></p>
+          <p>
+            This is an API for logging in or signing up users.
+          </p>
+          <p>
+            To register, just make a <span style="font-weight:bold; color:cyan">POST</span> request to the following URL:
+          </p>
+          <code
+            >https://ckwpzi.deta.dev/users/register
+          </code>
+          by passing a JSON body that looks something like this:
+          <code>{
+            "username": "starktony",
+            "email": "starkindustries@gmail.com",
+            "password": "jarvis"
+        }</code>
+        <p>
+          Once you register, to login, just make a <span style="font-weight:bold; color:cyan">POST</span> request to the following URL:
+        </p>
+        <code
+          >https://ckwpzi.deta.dev/users/login
+        </code>
+        by passing a JSON body that looks something like this:
+        <code>{
+          "email": "starkindustries@gmail.com",
+          "password": "jarvis"
+      }</code>
+        </article>
+      </section>
+      <section class="main-section" id="Declaring_variables">
+        <header>Micro-Task #3: Location microservice</header>
+        <article>
+          <p>This is an API for reverse geocoding. Reverse geocoding generates an address from a latitude and longitude.</p>
+          <p>The reverse geocoding API does not exactly compute the address for the coordinate it receives. It works by finding the closest suitable OSM object and returning its address information. This may occasionally lead to unexpected results.</p>
+          <p>First of all, it only includes OSM objects in its index that are suitable for searching. Small, unnamed paths for example are missing from the database and can therefore not be used for reverse geocoding either.</p>
+          <p>The other issue to be aware of is that the closest OSM object may not always have a similar enough address to the coordinate you were requesting. For example, in dense city areas it may belong to a completely different street.</p>
+          <p>
+            The main format of the reverse API is:
+            <code>https://jj01c3.deta.dev/locate/address?lat=&lt;value&gt;&lon=&lt;value&gt;</code>
+            where <span style="font-weight:bold; color:cyan">lat</span> and <span style="font-weight:bold; color:cyan">lon</span> are latitude and longitude of a coordinate in WGS84 projection. The API returns exactly one result or an error when the coordinate is in an area with no OSM data coverage.
+          </p>
+          <span style="font-weight:bold; color:cyan">EXAMPLE</span>
+          <code>https://jj01c3.deta.dev/locate/address?lat=24.75&lon=92.79</code> returns the following JSON response:
+          <code>{
+            "info":
+            {
+            "place_id":222299148,
+            "licence":"Data © OpenStreetMap contributors, ODbL 1.0. https://osm.org/copyright",
+            "osm_type":"way",
+            "osm_id":548494976,
+            "lat":"24.75522195",
+            "lon":"92.78744845272317",
+            "place_rank":30,
+            "category":"amenity",
+            "type":"university",
+            "importance":0.3100379589897483,
+            "addresstype":"amenity",
+            "name":"National Institute of technology - NIT Silchar",
+            "display_name":"National Institute of technology - NIT Silchar, SH39, Masimpur, Silchar, Cachar, Assam, 788118, India",
+            "address":
+            {
+              "amenity":"National Institute of technology - NIT Silchar",
+              "road":"SH39",
+              "village":"Masimpur",
+              "county":"Silchar",
+              "state_district":"Cachar",
+              "state":"Assam",
+              "ISO3166-2-lvl4":"IN-AS",
+              "postcode":"788118",
+              "country":"India",
+              "country_code":"in"
+            },
+            "boundingbox":["24.7491295","24.7610743","92.7776633","92.7959823"]
+          }
+        }</code>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
